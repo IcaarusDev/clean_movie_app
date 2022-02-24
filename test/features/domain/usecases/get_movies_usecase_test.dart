@@ -1,8 +1,8 @@
 import 'package:clean_movie_app/core/usecase/errors/failures.dart';
 import 'package:clean_movie_app/core/usecase/usecase.dart';
 import 'package:clean_movie_app/features/domain/entities/movies_entity.dart';
+import 'package:clean_movie_app/features/domain/repositories/movie_repository.dart';
 import 'package:clean_movie_app/features/domain/usecases/get_movies_usecase.dart';
-import 'package:clean_movie_app/features/repositories/movie_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
