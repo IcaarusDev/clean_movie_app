@@ -1,4 +1,4 @@
-import 'package:clean_movie_app/core/errors/excpetions.dart';
+import 'package:clean_movie_app/core/errors/exceptions.dart';
 import 'package:clean_movie_app/core/errors/failures.dart';
 import 'package:clean_movie_app/features/data/datasources/movie_datasource.dart';
 import 'package:clean_movie_app/features/data/models/movie_model.dart';
@@ -21,8 +21,7 @@ void main() {
   final tMovieModel = MovieModel(
       title: "Dilwale Dulhania Le Jayenge",
       overview:
-          "Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.",
-      voteAverage: 8.7);
+          "Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.");
 
   test('should return movie model when calls the datasource', () async {
     when(dataSource).calls(#getMovies).thenAnswer((_) async => tMovieModel);
