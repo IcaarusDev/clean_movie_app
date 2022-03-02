@@ -1,3 +1,4 @@
+import 'package:clean_movie_app/core/http_client/http_implementation.dart';
 import 'package:clean_movie_app/features/presentation/controllers/home_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:http/http.dart' as http;
@@ -11,13 +12,12 @@ import 'features/presentation/pages/home_page.dart';
 class AppModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.factory((i) => HomeController(i())),
-    Bind.lazySingleton((i) => GetMoviesUseCase(i())),
-    Bind.lazySingleton((i) => MovieRepositoryImplementation(i())),
-    Bind.lazySingleton(
-        (i) => MovieDatasourceImplementation(converter: i(), client: i())),
-    Bind.lazySingleton((i) => http.Client()),
-    Bind.lazySingleton((i) => DateInputConverter()),
+    Bind((i) => HomeController(i())),
+    Bind((i) => GetMoviesUseCase(i())),
+    Bind((i) => MovieRepositoryImplementation(i())),
+    Bind((i) => MovieDatasourceImplementation(converter: i(), client: i())),
+    Bind((i) => HttpImplementation()),
+    Bind((i) => DateInputConverter()),
   ];
 
   @override
