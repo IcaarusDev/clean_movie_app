@@ -1,5 +1,4 @@
 # clean_movie_app
 
-A new Flutter project.
-
+A simple movie app using flutter and clean architecture
 
